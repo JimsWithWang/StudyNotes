@@ -58,16 +58,16 @@ _注2：`git merge`命令中，可使用`--no-ff`参数强制禁止Fast forward�
     2. 向当前分支中恢复暂存到stash中的内容：
         + 使用`git stash apply`命令，可将stash暂存中的修改工作回复到当前分支，但stash暂存中的修改工作记录不会被删除；
         + 使用`git stash pop`命令，可将stash暂存中的修改工作回复到当前分支，同时stash暂存中的修改工作记录也会被删除；
-    3. 当切换回当前分支后，可使用`git stash list`查看暂存到stash上的内容：
+    3. 当切换回当前分支后，可使用`git stash list`查看暂存到stash上的内容；
 #### 3.5 本地git仓库的标签操作
-    1. 标签创建
-    + 在当前分支当前节点处创建标签：`git tag [标签名]`
-    + 任意commit节点处创建标签：`git tag [标签名] [commit_id]`
-    + 带注释标签创建：`git tag -a [标签名] -m [commit_id]`
-    2. 标签删除：`git tag -d [标签名]`
-    3. 标签查看：
-        + `git tag`：将所有标签按照名称排序列出；
-        + `git show [标签名]`：查看特定标签所指向的commit节点的状况。
+1. 标签创建
++ 在当前分支当前节点处创建标签：`git tag [标签名]`
++ 任意commit节点处创建标签：`git tag [标签名] [commit_id]`
++ 带注释标签创建：`git tag -a [标签名] -m [commit_id]`
+2. 标签删除：`git tag -d [标签名]`
+3. 标签查看：
++ `git tag`：将所有标签按照名称排序列出；
++ `git show [标签名]`：查看特定标签所指向的commit节点的状况。
 ## 二、服务器端git的使用
 ### 1.密钥的生成
 `ssh-keygen -t rsa -C [用户邮箱]`，运行该命令后，将在本地生成一个`.ssh`目录，在该目录内包含`id_rsa`和`id_rsa.pub`，`id_rsa`存储私钥，`id_rsa.pub`存储公钥。
